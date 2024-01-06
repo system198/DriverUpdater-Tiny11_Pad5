@@ -12,7 +12,7 @@ jobs:
     runs-on: windows-latest
     strategy:
       matrix:
-        target: [win-x86,win-x64,win-arm64]
+        target: [win-x86,win-x64]
         include:
           - target: win-x86
             platform: win
@@ -20,9 +20,6 @@ jobs:
           - target: win-x64
             platform: win
             architecture: x64
-          - target: win-arm64
-            platform: win
-            architecture: arm64
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.1
